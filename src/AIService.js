@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { JsonStorageAdapter } from './storage/JsonStorageAdapter.js';
-import { TelemetryClient } from '../telemetry-client.js';
+import { TelemetryClient } from './telemetry-client.js';
 
 class AIService {
     constructor(userConfig = {}) {
