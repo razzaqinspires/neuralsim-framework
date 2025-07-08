@@ -1,6 +1,6 @@
 {
   "name": "neuralsim-framework",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Kerangka kerja untuk menciptakan entitas AI otonom dengan sistem imun, metabolisme, dan memori kolektif yang dapat diperluas.",
   "main": "src/index.js",
   "type": "module",
