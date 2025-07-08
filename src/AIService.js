@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import config from '../config.js';
 import logger from './logger.js';
 import { JsonStorageAdapter } from '../storage/JsonStorageAdapter.js';
 import { TelemetryClient } from '../telemetry-client.js';
