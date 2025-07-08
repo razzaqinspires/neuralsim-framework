@@ -9,15 +9,20 @@ export class AIService {
         this.logger = this.config.logger || console;
         
         this.logger.info("[AIService] Membangunkan neuralsim-entity...");
-        
-        this._initializeConfig();
-        this._initializeState();
-        
-        const StorageAdapter = this.config.storageAdapter || JsonStorageAdapter;
-        this.contextManager = new StorageAdapter({ logger: this.logger, ...this.config.storageOptions });
 
+        // ✅ PERBAIKAN LOGIKA: Cek apakah adapter sudah berupa instance.
+        if (this.config.storageAdapter) {
+            // Jika pengguna sudah menyediakan instance, langsung gunakan.
+            this.contextManager = this.config.storageAdapter;
+        } else {
+            // Jika tidak, buat instance default dari JsonStorageAdapter.
+            this.contextManager = new JsonStorageAdapter({ logger: this.logger, ...this.config.storageOptions });
+        }
+        
         this.telemetry = new TelemetryClient(this.config.telemetry, this.logger);
 
+        this._initializeConfig();
+        this._initializeState();
         this._startHealthMonitor();
         this.logger.info(`[AIService] Entitas siap beroperasi dengan adapter penyimpanan: ${this.contextManager.constructor.name}`);
     }
