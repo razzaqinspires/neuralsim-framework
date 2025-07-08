@@ -1,0 +1,28 @@
+{
+  "name": "neuralsim-framework",
+  "version": "1.0.0",
+  "description": "Kerangka kerja untuk menciptakan entitas AI otonom dengan sistem imun, metabolisme, dan memori kolektif yang dapat diperluas.",
+  "main": "src/index.js",
+  "type": "module",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "node examples/usage-example.js"
+  },
+  "keywords": [
+    "ai",
+    "autonomous agent",
+    "cognitive architecture",
+    "framework",
+    "baileys",
+    "whatsapp"
+  ],
+  "author": "Arifi Razzaq",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/razzaqinspires/neuralsim-framework.git"
+  },
+  "dependencies": {}
+}
