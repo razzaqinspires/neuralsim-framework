@@ -3,7 +3,7 @@ import path from 'path';
 import { JsonStorageAdapter } from './storage/JsonStorageAdapter.js';
 import { TelemetryClient } from './telemetry-client.js';
 
-class AIService {
+export class AIService {
     constructor(userConfig = {}) {
         this.config = userConfig;
         this.logger = this.config.logger || console;
@@ -278,7 +278,3 @@ class AIService {
         return true;
     }
 }
-
-// Singleton Pattern: Buat satu instance dan ekspor instance tersebut.
-const aiServiceInstance = new AIService();
-export default aiServiceInstance;
